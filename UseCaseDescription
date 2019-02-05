@@ -1,0 +1,70 @@
+Customer
+Description: Person who buys items from store.
+Actors: Customer
+Basic flow of events: 
+1. Scans QR code.
+2. View availabilty in the store in. 
+3. Check availability in other stores. 
+4. Add items to basket. 
+5. View/edit basket.
+6. Check out 
+7. Login/create account/guest 
+8. Pay.
+Extensions: 
+Faulty code -> System informs the actor, not allowed to proceed.
+Can't find item in any store -> Informs the user.
+Can't connect/error with payment system handler -> Inform the user.
+Already have an existing account -> Infrom the user, ask for another email.
+Password doesn't meet requirements -> Ask to come up with a new password.
+Payment doesn't authenticate -> Show user error message from payment handler.
+Post conditions:
+Deduct items from stock, email user with order confirmation.
+Special conditions:
+Connected to Internet, uses compatible device.
+
+Staff
+Description: A employee of the store.
+Actors: Staff
+Preconditions: Work there, training in using the system, account with the system.
+Basic flow contents:
+1. Create an account.
+2. System authenticates user as an employee.
+3. Scan QR code.
+4. Find item in the database to match with.
+5. Link the code and the item.
+6. Update inventory.
+7. System acknowledges the data has been added.
+8. Employee signs out of the system.
+Extensions:
+System fails to authenticate the actor -> "Try again", can't proceed.
+Item to be added has already been added. -> Add a different item.
+Not a clear QR code -> Scan again.
+Can't connect to stock management system -> Inform user, try again.
+Post condition: Item exists in the system's database.
+Special requirements: Connected to Internet, employee of the company, compatible device.
+
+Payment handler
+Description: Handler of the customer's payment.
+Actor: Payment Handler.
+Preconditions: Order with outstanding payment.
+Basic flow of events:
+1. Takes card details and the amount owed.
+2. Verifies and carries out the payment.
+3. Infrom the system if it has been successful or not.
+Extensions:
+Payment wasn't successful -> Inform the user of why.
+Can't connect to payment system -> Inform the user, try again.
+Post conditions: Payment successful, order completes.
+Special requirements: 
+
+Stock management system:
+Description: Database containing stock information.
+Actor: Stock Management System
+Preconditions:
+Basic flow of events:
+1. Told whether to add or reduce stock.
+2. Add or reduce stock by the specified amount.
+3. Inform the system that the changes have been made.
+Extensions:
+Reduce stock and the quantity is already 0 -> Inform the user, item not available.
+Item doesn't exits -> Inform the system that the product doesn't exist and needs to be added and linked to.
