@@ -1,11 +1,26 @@
+Functional Requirements:
 - Scan QR code of their inventory
 - Add item to their virtual shopping basket.
 - Order other sizes of same item from other stores.
 - Check availability of item.
 - Can checkout and pay for purchase through connection to online payment service.
-
+- Reasonably secure the app.
+- Staff can attach QR code and update store inventory with items.
+- Possible things to add: delivery updates. 
+Non-functional Requirements:
+- Product: Assume users can be up to 1 million, but use a scalable backend.
+- Performance: 1 second - 2 seconds response time.
+- Space: 100MB.
+- Usability: Clear and simple UI.
+- Security: Users should be able to log in to their account with a password and have their data stored securely in database.
+- Legislative: Ensure we adhere to GDPR requirements.
+- Regulatory: Check with regulators of the fashion industry that the app meets any of their requirements.
+- Organizational: 6 employees, 6 months to design, develop and test.
+- Dependability: Ensure we test the app so that it's reasonably bug-free, and maintain and update the app after release.
 Ambigiuous:
- - What payment service they're talking about?
- - What is the process of checking out?
- - How do customers make an account?
- - What can/can't the staff do?
+ - What payment service they're talking about? Assume the payment handler will be PayPal, because it's the largest payment
+ handler, secure, simple, easy to use, and we assume most users have a PayPal account. (Maybe Stripe).
+ - What is the process of checking out? Add items to basket - view basket - guest checkout / signup - delivery address - payment handler
+ - How do users make an account? email, password, address, name, phone number.
+ - What can/can't the staff do? Linking QR code to an item on the system, CAN'T add to bag and checkout for customer.
+ - Number of expected users? Up to 1 million, scalable backend in case there are more.
