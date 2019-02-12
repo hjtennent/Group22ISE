@@ -1,0 +1,16 @@
+Customer
+———————
+-ID: String/Int {readOnly, unique}
+-name: String
+-email: String
+-password: String
+-creditCardInfo: String
+-shippingInfo: String
+———————
++ register(name: String, email: String, password: String, creditCardInfo: String, shippingInfo: String): boolean
++ login(email: String, password: String): boolean
++ updateProfile(): boolean
++ scanQRCode(): Item
++ addToBasket(item: Item): void
++ checkout(items: List<Item>): boolean
+
