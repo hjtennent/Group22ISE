@@ -1,0 +1,61 @@
+TEST PLAN
+WHITE BOX:
+  FEATURES TO BE TESTED
+
+   
+
+Functional Requirements:
+
+- Scan QR code of their inventory
+
+- Add item to their virtual shopping basket.
+
+- Order other sizes of same item from other stores.
+
+- Check availability of item.
+
+- Can checkout and pay for purchase through connection to online payment service.
+
+- Reasonably secure the app.
+
+- Staff can attach QR code and update store inventory with items.
+
+Non-functional Requirements:
+
+- Product: Test concurrent users can be up to 1 million.
+
+- Performance: 1 second - 2 seconds response time.
+
+- Space: 100MB.
+
+- Security: Users should be able to log in to their account with a password and have their data stored securely in database.
+
+      FEATURES NOT TO BE TESTED
+      
+   - APIs- we assume they work 
+   - working of QR scanner
+   - legislative compliance
+   - Server connectivity and uptime
+   
+   
+          APPROACH
+   Development testing:
+    - Unit testing
+      - Blackbox testing
+      - Normal test cases
+      - Edged test cases
+      - Invalid test cases
+      - User automated testing
+    - Component testing
+    - System testing
+      - Whitebox testing (because it is done by the developers)
+    Release testing:
+      - Blackbox testing derived from the system specification 
+   User testing:
+    - Alpha testing
+    - Beta testing
+    - Acceptance testing
+    - Program is run by the end user to check if all requirments are met
+    
+   
+   
